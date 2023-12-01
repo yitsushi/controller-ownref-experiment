@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - example.k8s.experiments.efertone.me
+  resources:
+  - myres
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - example.k8s.experiments.efertone.me
+  resources:
+  - myres/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - example.k8s.experiments.efertone.me
+  resources:
+  - myres/status
+  verbs:
+  - get
+  - patch
+  - update

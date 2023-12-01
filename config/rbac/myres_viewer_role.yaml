@@ -1,0 +1,20 @@
+# permissions for end users to view myres.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: myres-viewer-role
+rules:
+- apiGroups:
+  - example.k8s.experiments.efertone.me
+  resources:
+  - myres
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - example.k8s.experiments.efertone.me
+  resources:
+  - myres/status
+  verbs:
+  - get

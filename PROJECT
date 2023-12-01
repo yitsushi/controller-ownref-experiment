@@ -1,0 +1,16 @@
+domain: k8s.experiments.efertone.me
+layout:
+- go.kubebuilder.io/v3
+projectName: controller-ownref-experiment
+repo: github.com/yitsushi/controller-ownref-experiment
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: k8s.experiments.efertone.me
+  group: example
+  kind: MyRes
+  path: github.com/yitsushi/controller-ownref-experiment/api/v1alpha1
+  version: v1alpha1
+version: "3"

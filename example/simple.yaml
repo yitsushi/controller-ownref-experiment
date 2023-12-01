@@ -1,0 +1,6 @@
+apiVersion: example.k8s.experiments.efertone.me/v1alpha1
+kind: MyRes
+metadata:
+  name: myres-example
+  namespace: controller-ownref-experiment-system
+spec:

@@ -1,0 +1,24 @@
+# permissions for end users to edit myres.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: myres-editor-role
+rules:
+- apiGroups:
+  - example.k8s.experiments.efertone.me
+  resources:
+  - myres
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - example.k8s.experiments.efertone.me
+  resources:
+  - myres/status
+  verbs:
+  - get
